@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <head>
+        <title>My Portfolio</title>
+        <style>
+
+            *{
+                margin:0;
+                padding:0;
+            }
+             /* the background image did not want to work*/
+             body{
+                background-image: url("https://images.app.goo.gl/CazZVpqb5qh9epks8");
+                font-family:sans-serif;
+            }
+            header{
+                position:sticky;
+                top:0;
+                display:flex;
+                justify-content: space-between;
+                flex-wrap:wrap;
+                background-color: lightgrey;
+                align-items: center;
+                padding:15px;
+            }
+            footer{
+                position:static;
+                bottom:0;
+                display:flex;
+                justify-content:space-between;
+                flex-wrap:wrap;
+                background-color:lightgrey;
+                align-items:center;
+                padding:15px;
+            }
+            .credit{
+                font-family: 'Lucida Sans';
+            }
+            /*styling the navbar*/
+            .navmenu{
+                list-style:none;
+                display:flex;
+            }
+            .navmenu > li{
+                margin:0 20px;
+            }
+            .nav-link{
+                font-weight:600;
+                font-size: x-large;
+                color:rgb(22,59,180);
+                text-decoration:none;
+            }
+            .nav-link:hover{
+                color:rgba(22,59,180,0.507);
+                text-decoration:underline;
+            }
+            .active{
+                background-color:pink;
+                padding:15px;
+            }
+            /*responsive navbar*/
+            @media(max-width:680px){
+                header,footer{
+                    justify-content:center;
+                }
+                header h1,footer h1{
+                    color:rgb(22,59,180);
+                    width:100%;
+                    text-align:center;
+                }
+            }
+            /*grid display*/
+             .grid{
+                display:grid;
+                grid-template-columns: 20% 60% 20%;
+            }
+            .grid>div{
+                background: #eee;
+                padding:1em;
+            }
+            .grid>div:nth-child(odd){
+                background:#ddd;
+            }
+              
+           
+        </style>
+    </head>
+    
+    <body>
+
+        <header>
+            
+            <nav>
+                <ul class="navmenu">
+                <li><a class="nav-link active" href="#">Home</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#work">Work</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+       
+       
+        <main>
+            <div class="grid">
+                <div class="about-grid">
+                    <br><h2 id="about">About</h2>
+
+                    <form>
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" required><br>
+                        
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname"><br><br>
+                        
+                        
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email"><br><br>
+                    
+                        <label for="Contact">Contact:</label><br>
+                        <input type="text" id="contact" name="contact"><br><br>
+
+                        <textarea id="textarea" name="textarea" rows="2" cols="16">Enter description here</textarea><br><br>
+                        
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="password" name="password"><br><br>
+                        
+                        <label for="news">News letter:</label><br>
+                        <input type="checkbox" id="news" name="news"><br><br>
+                        
+                        <button type="submit" value="Submit">Submit</button>
+                
+                    </form><br>
+                
+                </div>
+                
+                <div class="work-grid">
+            
+                    <section>
+                    
+                        <h2 id="work">Work</h2>
+                    
+                        <div>
+                            <br><p>The video:</p><br>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+                    
+                        </div>
+            
+                    </section>
+                </div>
+
+                <div class="contact-grid">
+                    <section class="contact">
+                    
+                        <br><h2 id="contact">Contact</h2><br>
+
+                        <div class="contact-content">
+                            <h4>Have a project in mind? Email me:<a class="email" href="bouhlali.khaoula@gmail.com">bouhlali.khaoula@gmail.com</a></h4><br>
+                        </div>
+                
+                    </section>
+                </div>
+            </div>    
+       </main>
+      
+        
+       <footer>
+            
+            <div class="footer-content">
+                
+                <ul class="navmenu">
+                        
+                    <li><a class="nav-link"  href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+                    <li><a class="nav-link" href="https://www.linkedin.com/" target="_blank">Linkedin</a></li>
+                    <li><a class="nav-link" href="https://github.com/kay-B-hub" target="_blank">Github</a></li>
+
+                </ul>
+
+                <br><p class="credit"> 
+                    &copy; Copyright 2020 Khaoula Bouhlali. Designed and developed by Khaoula Bouhlali.
+                </p><br>
+                
+           
+            </div>
+        </footer>
+   
+    </body>
+</html>
